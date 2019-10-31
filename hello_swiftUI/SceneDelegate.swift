@@ -20,14 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         
-        let ladmarkList = LandmarkList()
+        let home = CategoryHome()
                 .environmentObject(UserData()) // 注入需要被 SwiftUI 监听的全局环境变量
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 //            window.rootViewController = UIHostingController(rootView: ContentView())
-            window.rootViewController = UIHostingController(rootView: ladmarkList)
+            window.rootViewController = UIHostingController(rootView: home)
             self.window = window
             window.makeKeyAndVisible()
         }
