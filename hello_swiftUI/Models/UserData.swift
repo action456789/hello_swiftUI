@@ -13,4 +13,5 @@ final class UserData: ObservableObject {
 //  @Published表示需要被 SwiftUI 监听
     @Published var showFavoritesOnly = false
     @Published var landmarks = landmarkData
+    @Published var profile = Profile.default
 }
